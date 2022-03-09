@@ -45,7 +45,7 @@ if period_type == '12':
         new_hour -= 12
     if new_hour == 12 and (timer_hour != 0 or timer_minute != 0):
         period = switch(period)
-    if hour == 12 and timer_hour != 0:
+    if hour == 12 and (timer_hour != 0 or timer_minute != 0):
         period = switch(period)
 else:
     while new_hour > 24:
